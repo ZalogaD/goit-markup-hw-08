@@ -81,31 +81,40 @@
 
     &__address {
       @extend %list;
-      flex-direction: column;
-      gap: 10px;
-      margin-left: auto;
+      display: none;
+      @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: auto;
+      }
       @media screen and (min-width:1200px) {
-      flex-direction: row;
+        flex-direction: row;
+        gap: 50px;
       }
     }
 
-    &__contact-link {
+    &__address-link {
       @extend %link;
       display: flex;
       align-items: center;
       gap: 10px;
       color: var(--main-font-color);
+      fill: currentColor;
       font-weight: 500;
       font-size: 12px;
-      line-height: 1.17;
+      line-height: calc(14/12);
       letter-spacing: 0.02em;
       transition: color 250ms var(--time-function);
-      font-size: 14px;
-      line-height: 1.14;
-    }
+      
+      @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: calc(16/14);
+      }
 
-      &:hover,
-      &:focus {
-      color: var(--accent-color);
-        } 
+          &:hover,
+          &:focus {
+          color: var(--accent-color);
+              } 
+  }
 }

@@ -13,6 +13,11 @@
   --shadow-btn-color: rgba(0, 0, 0, 0.15);
   --icon-color: #afb1b8;
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-gradient: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ) ;
 }
 
 html {
@@ -42,7 +47,7 @@ body.modal-open {
   list-style: none;
 }
 
-.mobile-menu__networks-link, .mobile-menu__contact-mail, .mobile-menu__contact-tel, .mobile-menu__link, .footer-social__link, .address__contact, .address__link, .card__link, .header__contact-link, .header__link, .logo,
+.mobile-menu__networks-link, .mobile-menu__contact-mail, .mobile-menu__contact-tel, .mobile-menu__link, .footer-social__link, .address__contact, .address__link, .card__link, .header__address-link, .header__link, .logo,
 .logo__dark {
   text-decoration: none;
 }
@@ -241,12 +246,20 @@ img {
   background: var(--accent-color);
 }
 .header__address {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header__address {
@@ -254,9 +267,10 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 50px;
   }
 }
-.header__contact-link {
+.header__address-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,16 +279,21 @@ img {
           align-items: center;
   gap: 10px;
   color: var(--main-font-color);
+  fill: currentColor;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms var(--time-function);
   transition: color 250ms var(--time-function);
-  font-size: 14px;
-  line-height: 1.14;
 }
-.header:hover, .header:focus {
+@media screen and (min-width: 1200px) {
+  .header__address-link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
+}
+.header__address-link:hover, .header__address-link:focus {
   color: var(--accent-color);
 }
 
@@ -667,9 +686,6 @@ img {
   background: var(--accent-color);
   fill: var(--main-light-color);
   gap: 12px;
-  margin-left: 12px;
-  width: 200px;
-  height: 50px;
 }
 
 .footer-form__btn::after {

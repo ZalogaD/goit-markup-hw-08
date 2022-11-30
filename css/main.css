@@ -13,6 +13,11 @@
   --shadow-btn-color: rgba(0, 0, 0, 0.15);
   --icon-color: #afb1b8;
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-gradient: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ) ;
 }
 
 html {
@@ -42,7 +47,7 @@ body.modal-open {
   list-style: none;
 }
 
-.mobile-menu__networks-link, .mobile-menu__contact-mail, .mobile-menu__contact-tel, .mobile-menu__link, .footer-social__link, .address__contact, .address__link, .icon__list__link, .header__contact-link, .header__link, .logo,
+.mobile-menu__networks-link, .mobile-menu__contact-mail, .mobile-menu__contact-tel, .mobile-menu__link, .footer-social__link, .address__contact, .address__link, .icon__list__link, .header__address-link, .header__link, .logo,
 .logo__dark {
   text-decoration: none;
 }
@@ -241,12 +246,20 @@ img {
   background: var(--accent-color);
 }
 .header__address {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header__address {
@@ -254,9 +267,10 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 50px;
   }
 }
-.header__contact-link {
+.header__address-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,16 +279,21 @@ img {
           align-items: center;
   gap: 10px;
   color: var(--main-font-color);
+  fill: currentColor;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms var(--time-function);
   transition: color 250ms var(--time-function);
-  font-size: 14px;
-  line-height: 1.14;
 }
-.header:hover, .header:focus {
+@media screen and (min-width: 1200px) {
+  .header__address-link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
+}
+.header__address-link:hover, .header__address-link:focus {
   color: var(--accent-color);
 }
 
@@ -377,7 +396,6 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 30px;
-    list-style: none;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -478,7 +496,6 @@ img {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 30px;
-  list-style: none;
 }
 
 .about__label {
@@ -608,7 +625,6 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  text-decoration: none;
   color: var(--icon-color);
   fill: currentColor;
   background-color: var(--main-light-color);
@@ -909,9 +925,6 @@ img {
   background: var(--accent-color);
   fill: var(--main-light-color);
   gap: 12px;
-  margin-left: 12px;
-  width: 200px;
-  height: 50px;
 }
 
 .footer-form__btn::after {
@@ -1093,56 +1106,6 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  height: 581px;
-  border-radius: 4px;
-  background: var(--main-light-color);
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: -webkit-transform 250ms var(--time-function);
-  transition: -webkit-transform 250ms var(--time-function);
-  transition: transform 250ms var(--time-function);
-  transition: transform 250ms var(--time-function), -webkit-transform 250ms var(--time-function);
-  padding: 40px 40px 40px 40px;
-}
-
-.close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  fill: var(--logo-color);
-  background: var(--main-light-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.close:hover,
-.close:focus {
-  fill: var(--accent-color);
-}
-
-.close-svg {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .modal {

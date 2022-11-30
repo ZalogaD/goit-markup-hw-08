@@ -20,4 +20,5 @@
     "> 1%",
     "last 2 versions"
   ],
+  "liveServer.settings.CustomBrowser": "microsoft-edge",
 }
