@@ -40,13 +40,23 @@
               <a href="#" class="header__link">Контакти</a>
             </li>
           </ul>
+          <button
+            class="header__btn js-open-menu"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="40" height="40">
+              <use href="./img/symbol-defs.svg#menu"></use>
+            </svg>
+          </button>
         </nav>
 
         <!-- Контакти -->
         <ul class="address">
           <li>
             <a href="mailto:info@devstudio.com" class="address__contact-link">
-              <svg class="address__contact-icon" width="16" height="12">
+              <svg width="16" height="12">
                 <use href="./img/symbol-defs.svg#mail"></use>
               </svg>
               info@devstudio.com</a
@@ -55,7 +65,7 @@
 
           <li>
             <a href="tel:+380961111111" class="address__contact-link">
-              <svg class="address__contact-icon" width="10" height="16">
+              <svg width="10" height="16">
                 <use href="./img/symbol-defs.svg#smartphone"></use>
               </svg>
               +380961111111</a
@@ -94,7 +104,28 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/progect1.jpg" alt="Відкритий веб-сайт на ноуті" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project1.jpg 1x, ./img/mobile/project1_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project1.jpg 1x, ./img/tablet/project1_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project1.jpg 1x, ./img/project1_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img
+                      src="./img/project1.jpg"
+                      alt="Відкритий веб-сайт на ноуті"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -114,11 +145,28 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img
-                    src="img/project2.jpg"
-                    alt="постер з гри баскетболу двох команд"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset=".img/mobile/project2.jpg 1x, .img/mobile/project2_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset=".img/tablet/project2.jpg 1x, .img/tablet/project2_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset=".img/project2.jpg 1x, .img/project2_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img
+                      src="./img/project2.jpg"
+                      alt="постер з гри баскетболу двох команд"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -140,7 +188,28 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/project3.jpg" alt="додаток ресторану" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project3.jpg 1x, ./img/mobile/project3_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project3.jpg 1x, ./img/tablet/project3_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project3.jpg 1x, ./img/project3_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img
+                      src="./img/project3.jpg"
+                      alt="додаток ресторану"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -160,7 +229,27 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/project4.jpg" alt="навушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project4.jpg 1x, ./img/mobile/project4_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project4.jpg 1x, ./img/tablet/project4_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project4.jpg 1x, ./img/project4_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img
+                      src="./img/project4.jpg"
+                      alt="навушники"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -180,7 +269,27 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/project5.jpg" alt="коробки" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project5.jpg 1x, ./img/mobile/project5_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project5.jpg 1x, ./img/tablet/project5_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project5.jpg 1x, ./img/project5_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img
+                      src="./img/project5.jpg"
+                      alt="коробки"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -200,7 +309,27 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/project6.jpg" alt="монітор" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project6.jpg 1x, ./img/mobile/project6_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project6.jpg 1x, ./img/tablet/project6_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project6.jpg 1x, ./img/project6_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img
+                      src="./img/project6.jpg"
+                      alt="монітор"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -220,7 +349,27 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/project7.jpg" alt="книга" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project7.jpg 1x, ./img/mobile/project7_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project7.jpg 1x, ./img/tablet/project7_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project7.jpg 1x, ./img/project7_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img
+                      src="./img/project7.jpg"
+                      alt="книга"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -240,7 +389,27 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/project8.jpg" alt="бірочка" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project8.jpg 1x, ./img/mobile/project8_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project8.jpg 1x, ./img/tablet/project8_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project8.jpg 1x, ./img/project8_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img
+                      src="./img/project8.jpg"
+                      alt="бірочка"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -260,7 +429,27 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="card__description">
-                  <img src="img/project9.jpg" alt="друкує на ноуті" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/mobile/project9.jpg 1x, ./img/mobile/project9_2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/tablet/project9.jpg 1x, ./img/tablet/project9_.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./img/project9.jpg 1x, ./img/project9_2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <img
+                      src="./img/project9.jpg"
+                      alt="друкує на ноуті"
+                      sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, 100vw"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -310,28 +499,48 @@
           <h2 class="footer-social_title">Приєднуйтесь</h2>
           <ul class="footer-social_list list">
             <li>
-              <a href="" class="footer-social__link">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="footer-social__link"
+              >
                 <svg width="20" height="20">
                   <use href="./img/symbol-defs.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="footer-social__link">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="footer-social__link"
+              >
                 <svg width="20" height="20">
                   <use href="./img/symbol-defs.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="footer-social__link">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="footer-social__link"
+              >
                 <svg width="20" height="20">
                   <use href="./img/symbol-defs.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="footer-social__link">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="footer-social__link"
+              >
                 <svg width="20" height="20">
                   <use href="./img/symbol-defs.svg#linkedin"></use>
                 </svg>
@@ -350,5 +559,83 @@
         </div>
       </div>
     </footer>
+    <!-- Мобільне меню -->
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="mobile-menu__btn js-close-menu" type="button">
+        <svg width="40" height="40">
+          <use href="./img/symbol-defs.svg#close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu__content">
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-menu__contact">
+          <li class="mobile-menu__contact-item">
+            <a href="tel:+380961111111" class="mobile-menu__contact-tel">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-menu__contact-item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu__contact-mail"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-menu__networks">
+          <li class="mobile-menu__networks-item">
+            <a
+              class="mobile-menu__networks-link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-menu__networks-item">
+            <a
+              class="mobile-menu__networks-link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Twitter</a
+            >
+          </li>
+          <li class="mobile-menu__networks-item">
+            <a
+              class="mobile-menu__networks-link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Facebook</a
+            >
+          </li>
+          <li class="mobile-menu__networks-item">
+            <a
+              class="mobile-menu__networks-link"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

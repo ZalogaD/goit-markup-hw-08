@@ -28,14 +28,11 @@
     border-color: var(--icon-color);
     transition: background-color 250ms var(--time-function),
         color 250ms var(--time-function);
+    fill: currentColor;
 
     &:hover,
     &:focus {
         color: var(--accent-color);
         border-color: var(--accent-color);
     }
-}
-
-.client-icon {
-    fill: currentColor;
 }
