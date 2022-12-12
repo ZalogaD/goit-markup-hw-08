@@ -25,12 +25,12 @@
       background-color: var(--main-light-color);
       transition: fill 250ms var(--time-function);
       
-    &:hover, &:focus {
-      fill: var(--accent-color);
-    }
-    @media screen and (min-width:768px) {
-      display: none;
-    }
+        &:hover, &:focus {
+          fill: var(--accent-color);
+        }
+        @media screen and (min-width:768px) {
+          display: none;
+        }
     }
 
     &__list {
@@ -52,6 +52,7 @@
       display: block;
       padding-top: 32px;
       padding-bottom: 32px;
+      color: var(--secondary-font-color);
       font-weight: 500;
       line-height: 1.14;
       letter-spacing: 0.02em;
@@ -79,7 +80,7 @@
       background: var(--accent-color);
     }
 
-    &__address {
+    &__contact {
       @extend %list;
       display: none;
       @media screen and (min-width:768px) {
@@ -94,7 +95,7 @@
       }
     }
 
-    &__address-link {
+    &__contact-link {
       @extend %link;
       display: flex;
       align-items: center;

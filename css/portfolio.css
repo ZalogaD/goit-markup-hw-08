@@ -43,11 +43,11 @@ body.modal-open {
   overflow: hidden;
 }
 
-.mobile-menu__networks, .mobile-menu__contact, .mobile-menu__list, .footer-social_list, .footer__list, .card, .filter__list, .header__address, .header__list {
+.mobile-menu__networks, .mobile-menu__contact, .mobile-menu__list, .footer-social_list, .footer__list, .card, .filter__list, .header__contact, .header__list {
   list-style: none;
 }
 
-.mobile-menu__networks-link, .mobile-menu__contact-mail, .mobile-menu__contact-tel, .mobile-menu__link, .footer-social__link, .address__contact, .address__link, .card__link, .header__address-link, .header__link, .logo,
+.mobile-menu__networks-link, .mobile-menu__contact-mail, .mobile-menu__contact-tel, .mobile-menu__link, .footer-social__link, .address__contact, .address__link, .card__link, .header__contact-link, .header__link, .logo,
 .logo__dark {
   text-decoration: none;
 }
@@ -222,6 +222,7 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  color: var(--secondary-font-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -245,11 +246,11 @@ img {
   border-radius: 2px;
   background: var(--accent-color);
 }
-.header__address {
+.header__contact {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .header__address {
+  .header__contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -262,7 +263,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__address {
+  .header__contact {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -270,7 +271,7 @@ img {
     gap: 50px;
   }
 }
-.header__address-link {
+.header__contact-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,12 +289,12 @@ img {
   transition: color 250ms var(--time-function);
 }
 @media screen and (min-width: 1200px) {
-  .header__address-link {
+  .header__contact-link {
     font-size: 14px;
     line-height: 1.14;
   }
 }
-.header__address-link:hover, .header__address-link:focus {
+.header__contact-link:hover, .header__contact-link:focus {
   color: var(--accent-color);
 }
 
